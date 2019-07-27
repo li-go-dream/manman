@@ -1,0 +1,158 @@
+<template>
+  <el-dialog title="历史信息" :visible.sync="dialogTableVisible">
+    <el-table
+    :height="300"
+    :data="tableData"
+    border
+    style="width: 100%">
+    <el-table-column
+      fixed
+      align="center"
+      prop="id"
+      label="序号"
+      width="50">
+    </el-table-column>
+    <el-table-column
+      align="center"
+      prop="leader"
+      label="市场负责人"
+      width="150">
+    </el-table-column>
+    <el-table-column
+      align="center"
+      prop="project"
+      label="项目名称"
+      width="150">
+    </el-table-column>
+    <el-table-column
+      align="center"
+      prop="project_details"
+      label="项目概况"
+      width="300">
+    </el-table-column>
+    <el-table-column
+      align="center"
+      prop="market_dynamics"
+      label="项目状态"
+      width="120">
+    </el-table-column>
+    <el-table-column
+      align="center"
+      prop="owner_unit"
+      label="业主单位"
+      width="120">
+    </el-table-column>
+    <el-table-column
+      align="center"
+      prop="contact_name"
+      label="联系人"
+      width="120">
+    </el-table-column>
+    <el-table-column
+      align="center"
+      prop="contact_phone"
+      label="联系电话"
+      width="120">
+    </el-table-column>
+    <el-table-column
+      align="center"
+      prop="track_stage"
+      label="跟踪阶段"
+      width="120">
+    </el-table-column>
+    <el-table-column
+      align="center"
+      prop="area"
+      label="所属片区"
+      width="120">
+    </el-table-column>
+    <el-table-column
+      align="center"
+      prop="update_time"
+      label="更新时间"
+      width="120">
+    </el-table-column>
+    <el-table-column
+      align="center"
+      prop="first_input_time"
+      label="录入时间"
+      width="120">
+    </el-table-column>
+    <el-table-column
+      align="center"
+      prop="project_investment"
+      label="项目投资额(万元)"
+      width="140">
+    </el-table-column>
+    <el-table-column
+      align="center"
+      prop="estimated_contract_amount"
+      label="预计合同额(万元)"
+      width="140">
+    </el-table-column>
+    <el-table-column
+      align="center"
+      prop="contract_way"
+      label="预计承揽方式"
+      width="120">
+    </el-table-column>
+    <el-table-column
+      align="center"
+      prop="contract_time"
+      label="预计承揽时间"
+      width="120">
+    </el-table-column>
+    <el-table-column
+      align="center"
+      prop="competitor"
+      label="竞争对手"
+      width="120">
+    </el-table-column>
+    <el-table-column
+      align="center"
+      prop="project_importance"
+      label="项目重要性"
+      width="120">
+    </el-table-column>
+    <el-table-column
+      align="center"
+      prop="development_process_description"
+      label="开发进展描述"
+      width="120">
+    </el-table-column>
+    <el-table-column
+      align="center"
+      prop="contract_result"
+      label="承揽结果"
+      width="300">
+    </el-table-column>
+  </el-table>
+  </el-dialog>
+</template>
+
+<script>
+export default {
+  data(){
+    return{
+      tableData:[],
+      dialogTableVisible: false,
+    }
+  },
+  methods:{
+    init(x) {
+      this.dialogTableVisible=true;
+      this.tableData = [];
+      if(x){
+        this.tableData.push(x);
+          this.isadd = false;
+      }else{
+          this.isadd = true;
+      }
+    },
+  }
+}
+</script>
+
+<style>
+
+</style>

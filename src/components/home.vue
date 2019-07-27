@@ -109,12 +109,12 @@
         </template>
         </el-table-column>
     </el-table>
-    <AddorUpdate ref="isAddorUpdate"></AddorUpdate>
+    <!-- <AddorUpdate ref="isAddorUpdate"></AddorUpdate> -->
     </div>
 </template>
 
 <script>
-import AddorUpdate from './AddorUpdate'
+// import AddorUpdate from './AddorUpdate'
 const cityOptions = ['上海', '北京', '广州', '深圳'];
 export default {
     data() {

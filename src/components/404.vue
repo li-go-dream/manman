@@ -1,5 +1,5 @@
 <template>
-    <div>字典</div>
+  <div>未找到</div>
 </template>
 
 <script>

@@ -6,8 +6,11 @@ import 'element-ui/lib/theme-chalk/index.css';
 import App from './App'
 import router from './router'
 import './assets/reset.scss'
+import * as ajax from './services'
 
+Vue.prototype.$ajax = ajax;
 Vue.use(ElementUI);
+
 Vue.config.productionTip = false
 
 /* eslint-disable no-new */
